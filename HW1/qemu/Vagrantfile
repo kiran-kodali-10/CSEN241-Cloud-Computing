@@ -1,0 +1,29 @@
+# Initialize Vagrant configuration with API version 2
+Vagrant.configure("2") do |config|
+
+    # Set the base image for VM. Here, we use Ubuntu 20.04 LTS (Focal Fossa) from the official Vagrant box catalog
+    config.vm.box = "ubuntu/focal64"
+  
+    # Customize the VirtualBox provider settings for the VM
+    config.vm.provider "virtualbox" do |vb|
+      # Allocate memory and CPU resources to the VM
+      vb.memory = "2048" # Set the VM's memory to 2GB
+      vb.cpus = 2 # Assign two CPU cores to the VM
+    end
+  
+    # Update and upgrade the VM as part of the initial provisioning process
+    # This ensures our VM is up-to-date with the latest patches and software versions
+    config.vm.provision "shell", inline: <<-SHELL
+      sudo apt-get update && sudo apt-get upgrade -y
+    SHELL
+  
+    # Configure a shared folder between the host and the VM
+    # This mounts a host directory (relative path 'qemu') to the root ('/') of the VM for easy file exchange
+    config.vm.synced_folder "qemu", "/", type: "virtualbox"
+  
+    # Run a custom shell script for additional VM setup
+    # 'vagrant_setup.sh' should be in the same directory as this Vagrantfile
+    config.vm.provision "shell", path: "vagrant_setup.sh"
+  
+  end
+  
