@@ -1,0 +1,25 @@
+Request count exceeded 100. Scaling up replicas...
+Current replica count after scaling: 2
+Current replica count: 1, Served requests: 120
+Current replica count: 1, Served requests: 240
+Current replica count: 1, Served requests: 360
+Current replica count: 1, Served requests: 480
+Current replica count: 1, Served requests: 600
+Current replica count: 1, Served requests: 720
+Current replica count: 1, Served requests: 840
+Current replica count: 1, Served requests: 960
+Queries Per Second: 108.20
+Current replica count: 1, Served requests: 120
+Current replica count: 1, Served requests: 240
+Current replica count: 1, Served requests: 120
+Current replica count: 1, Served requests: 240
+Current replica count: 1, Served requests: 360
+Current replica count: 1, Served requests: 480
+Current replica count: 1, Served requests: 600
+Current replica count: 1, Served requests: 120
+Current replica count: 1, Served requests: 240
+Current replica count: 1, Served requests: 360
+Current replica count: 1, Served requests: 480
+Current replica count: 1, Served requests: 120
+Current replica count: 1, Served requests: 240
+Queries Per Second: 76.56
