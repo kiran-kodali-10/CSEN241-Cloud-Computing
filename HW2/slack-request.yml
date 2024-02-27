@@ -5,6 +5,6 @@ functions:
   slack-request:
     lang: python
     handler: ./slack-request
-    image: <YOUR_DOCKER_HUB_ACCOUNT>/slack-request
+    image: kkodali10/slack-request
     environment:
       content_type: application/json
